@@ -1,7 +1,7 @@
 #include <UnitTest++/UnitTest++.h>
 
-#include <Locks/SpinLockWithBackoff.hpp>
-#include <Locks/MutexBackoffPolicy.hpp>
+#include <locks/SpinLockWithBackoff.hpp>
+#include <locks/MutexBackoffPolicy.hpp>
 
 #include <cstddef>
 #include <mutex>

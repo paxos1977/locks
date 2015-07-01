@@ -1,5 +1,5 @@
 #include <UnitTest++/UnitTest++.h>
-#include <Locks/SpinLock.hpp>
+#include <locks/SpinLock.hpp>
 
 #include <cstddef>
 #include <mutex>
