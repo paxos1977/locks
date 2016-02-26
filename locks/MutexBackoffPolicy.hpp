@@ -1,11 +1,13 @@
-#pragma once 
-#include <mutex>
+#pragma once
+
+#include <condition_variable>
 #include <cstdint>
+#include <mutex>
 
 namespace locks {
 
     // If we reach our spin count, back off
-    // by locking on a mutex and waiting for 
+    // by locking on a mutex and waiting for
     // a condition variable to wake us up.
     class MutexBackoffPolicy
     {
@@ -17,7 +19,7 @@ namespace locks {
 
         void failed_acquire(const std::uint8_t failureCount)
         {
-            // if we've failed for more than 
+            // if we've failed for more than
             if(failureCount >= spinCount_)
             {
                 std::unique_lock<std::mutex> guard(mutex_);
