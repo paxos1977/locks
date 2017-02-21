@@ -1,4 +1,4 @@
-#include <UnitTest++/UnitTest++.h>
+#include "./platform/UnitTestSupport.hpp"
 #include <locks/SpinLock.hpp>
 
 #include <cstddef>

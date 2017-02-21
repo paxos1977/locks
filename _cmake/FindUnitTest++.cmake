@@ -16,11 +16,11 @@ if(PC_HOMEBREW_PATH)
     set(PC_HOMEBREW_LIBRARY_DIRS "$ENV{HOMEBREW}/lib")
 endif()
 
-find_path(UNITTEST++_INCLUDE_DIR UnitTest++/UnitTest++.h
+find_path(UNITTEST++_INCLUDE_DIR UnitTest++/UnitTest++.h unittest++/UnitTest++.h
     HINTS ${PC_UNITTEST++_INCLUDEDIR} ${PC_UNITTEST++_INCLUDE_DIRS} ${PC_HOMEBREW_INCLUDE_DIRS}
     PATH_SUFFIXES UnitTest++ )
 
-find_library(UNITTEST++_LIBRARY NAMES UnitTest++ libUnitTest++
+find_library(UNITTEST++_LIBRARY NAMES UnitTest++ libUnitTest++ libunittest++
     HINTS ${PC_UNITTEST++_LIBDIR} ${PC_UNITTEST++_LIBRARY_DIRS} ${PC_HOMEBREW_LIBRARY_DIRS} )
 
 set(UNITTEST++_LIBRARIES ${UNITTEST++_LIBRARY} )
